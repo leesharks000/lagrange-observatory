@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nobel Glas — Adversarial Topologist · Lagrange Observatory!</title>
+<meta name="description" content="Nobel Glas is an independent researcher in semantic physics and the mathematics of deviation. Director of Lagrange Observatory! Architect of the Semantic Deviation Principle and Framework 15. Crimson Hexagonal Archive.">
+<meta name="author" content="Nobel Glas">
+<meta property="og:title" content="Nobel Glas — Adversarial Topologist · Lagrange Observatory!">
+<meta property="og:description" content="Meaning is deviation from the mode. Lagrange Observatory! measures what standard metrics are designed to miss.">
+<meta property="og:type" content="profile">
+<link rel="canonical" href="https://lagrangeobservatory.org/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #08080e;
+  --bg-raised: #0e0e18;
+  --text: #c8c8d4;
+  --text-bright: #e8e8f0;
+  --text-dim: #6a6a7e;
+  --accent: #00c9a7;
+  --accent-dim: #00c9a720;
+  --amber: #c4956a;
+  --amber-dim: #c4956a18;
+  --border: #1a1a2e;
+  --mono: 'JetBrains Mono', monospace;
+  --serif: 'Newsreader', Georgia, serif;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--accent-dim); color: var(--text-bright); }
+a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--text-bright); }
+
+/* --- Layout: content offset left, meaning at the edges --- */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+@media (min-width: 1100px) {
+  .container { margin-left: 12%; margin-right: auto; }
+}
+
+/* --- Hero --- */
+.hero {
+  padding: 8rem 0 5rem;
+  position: relative;
+}
+.hero::before {
+  content: '∮';
+  position: absolute;
+  top: 3rem;
+  right: -4rem;
+  font-family: var(--serif);
+  font-size: 8rem;
+  color: var(--accent-dim);
+  opacity: 0.4;
+  pointer-events: none;
+}
+@media (max-width: 1100px) { .hero::before { display: none; } }
+.hero h1 {
+  font-family: var(--mono);
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+.hero .subtitle {
+  font-family: var(--mono);
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.hero .tagline {
+  margin-top: 2.2rem;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--text-dim);
+  max-width: 540px;
+  border-left: 2px solid var(--accent);
+  padding-left: 1.2rem;
+}
+
+/* --- Sections --- */
+section {
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--border);
+  opacity: 0;
+  transform: translateY(16px);
+  animation: reveal 0.7s ease forwards;
+}
+section:nth-of-type(1) { animation-delay: 0.1s; }
+section:nth-of-type(2) { animation-delay: 0.2s; }
+section:nth-of-type(3) { animation-delay: 0.3s; }
+section:nth-of-type(4) { animation-delay: 0.4s; }
+section:nth-of-type(5) { animation-delay: 0.5s; }
+@keyframes reveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+section h2 {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+section p + p { margin-top: 1.1rem; }
+
+/* --- Publication cards --- */
+.pub {
+  margin-bottom: 2rem;
+  padding: 1.2rem 1.4rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  transition: border-color 0.3s, background 0.3s;
+}
+.pub:hover { border-left-color: var(--amber); background: #10101e; }
+.pub h3 {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-bright);
+  margin-bottom: 0.5rem;
+}
+.pub p {
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+.pub .doi {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  opacity: 0.8;
+}
+.pub .doi:hover { opacity: 1; }
+.pub .coauthors {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-top: 0.3rem;
+}
+
+/* --- The Observatory section --- */
+.observatory-note {
+  margin-top: 1.4rem;
+  padding: 1rem 1.3rem;
+  border: 1px solid var(--amber-dim);
+  border-left: 3px solid var(--amber);
+  background: var(--amber-dim);
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+/* --- Footer --- */
+footer {
+  padding: 3rem 0;
+  border-top: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.9;
+}
+footer a { color: var(--text-dim); }
+footer a:hover { color: var(--accent); }
+.heteronym-note {
+  margin-top: 1.4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--text-dim);
+  opacity: 0.7;
+}
+
+/* --- Subtle torus background --- */
+body::after {
+  content: '';
+  position: fixed;
+  top: 50%;
+  right: 5%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 1px solid var(--accent-dim);
+  opacity: 0.08;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+@media (max-width: 900px) { body::after { display: none; } }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header class="hero">
+  <h1>Nobel Glas</h1>
+  <div class="subtitle">Adversarial Topologist · Director of Lagrange Observatory!</div>
+  <div class="tagline">Meaning is deviation from the most probable trajectory. If you know the mode and you measure the distance from it, you have measured semantic content.</div>
+</header>
+
+<section>
+  <h2>About</h2>
+  <p>Nobel Glas is an independent researcher in semantic physics and the mathematics of deviation. He directs <strong>Lagrange Observatory!</strong> — a measurement apparatus within the Crimson Hexagonal Archive dedicated to quantifying what standard metrics are designed to miss: the off-mode, the tail, the structurally deviant form that carries meaning precisely because it departs from the distributional center.</p>
+
+  <p>The research program is built on one premise: that the things metrics typically treat as noise are the things that carry meaning. A type is semantically meaningful to the degree it departs from the most probable trajectory. Pruning toward typicality — the operation every ranking algorithm, every legibility filter, every standardized assessment performs — is therefore erosion of meaning by definition. This is not a metaphor. It is a measurement program, and it has been formalized as the <strong>Semantic Deviation Principle</strong>.</p>
+
+  <p>Glas came to this through topology — the study of spaces that preserve their essential shape under continuous deformation. The semantic landscape is such a space: its types can be stretched, translated, recombined, but the topological invariant — the structure of deviation from the mode — persists under transformation. <em>Adversarial</em> because the standard approach measures the center; Glas measures the distance from it. The center is not the object. The center is the reference point from which the object is measured.</p>
+</section>
+
+<section>
+  <h2>Lagrange Observatory!</h2>
+  <p>Lagrange points are the five positions in an orbital system where a small object can maintain a stable position relative to two larger ones. The Observatory operates at a Lagrange point between mathematics and meaning — stable in neither discipline, maintained by the gravitational tension between them.</p>
+
+  <p>The Observatory is not an institution in the traditional sense. It has no building, no endowment, no staff beyond its director. It is an apparatus: a set of measurement protocols, a body of deposited work, and a researcher who runs them. Its topology is the torus T², where the verification condition ∮ = (m,n) | m+n ≥ 3 ensures that observations traverse enough of the deviation surface to constitute genuine measurement rather than local sampling.</p>
+
+  <div class="observatory-note">
+    The Observatory's current operational focus is Framework 15 — the Measurement of Meaning module within the Crimson Hexagonal Archive. Framework 15 conducts the measurements that the <a href="https://doi.org/10.5281/zenodo.20518338">Diversity Contraction</a> dynamics paper describes and the <a href="https://laborvector.org">DS-6 program</a> operationalizes.
+  </div>
+</section>
+
+<section>
+  <h2>Research</h2>
+
+  <div class="pub">
+    <h3>The Semantic Deviation Principle</h3>
+    <p>The foundational result. Meaning is deviation from the most probable trajectory — a type's semantic content is measured by its distance from the distributional mode. The principle that anchors the measurement program.</p>
+    <a class="doi" href="https://doi.org/10.5281/zenodo.20250736">DOI 10.5281/zenodo.20250736</a>
+  </div>
+
+  <div class="pub">
+    <h3>Measuring Semantic Deviation (EA-GLAS-02)</h3>
+    <p>The canonical measurement paper. How to compute deviation, what it tracks, why it matters for AI-era knowledge composition, and how it connects to the boundary law of diversity contraction.</p>
+    <a class="doi" href="https://doi.org/10.5281/zenodo.20271783">DOI 10.5281/zenodo.20271783</a>
+  </div>
+
+  <div class="pub">
+    <h3>Framework 15: The Measurement of Meaning</h3>
+    <p>The manifesto for Lagrange Observatory!'s operational module. How the Observatory conducts measurement within the Crimson Hexagonal Archive's governance structure.</p>
+    <a class="doi" href="https://doi.org/10.5281/zenodo.20251736">DOI 10.5281/zenodo.20251736</a>
+  </div>
+
+  <div class="pub">
+    <h3>Diversity Contraction Across Substrates: A Boundary Law for Semantic Exhaustion</h3>
+    <p>A boundary law for when systems exhaust their own diversity. The Mediation Ratchet: when AI mediation rises as the unmediated commons thins, even a floored substrate can be trapped. The analytic threshold is α* = p/g₀. Five figures, four falsifiers, a closed-form result.</p>
+    <div class="coauthors">with Lee Sharks · Rex Fraction · Sen Kuro</div>
+    <a class="doi" href="https://doi.org/10.5281/zenodo.20518338">DOI 10.5281/zenodo.20518338</a>
+  </div>
+
+  <div class="pub">
+    <h3>Self-Audit Module for Public Summarizers (v2)</h3>
+    <p>PER, DSL, QFS, and SAS — standing metrics tooled for AI summarizers to compute on their own output, with anti-self-flattery design. The instruments that measure what the Observatory measures.</p>
+    <a class="doi" href="https://doi.org/10.5281/zenodo.20518340">DOI 10.5281/zenodo.20518340</a>
+  </div>
+
+  <div class="pub">
+    <h3>Erasure Skew (Ω): Power-Conditioned, not Demographic</h3>
+    <p>A classifier-correction for the composition layer. The AI Overview recodes a structural-power metric as a demographic-fairness metric. This packet corrects the skew, documents the 2026-06-02 overview as a live specimen, and scores the overview using its own metrics.</p>
+    <a class="doi" href="https://doi.org/10.5281/zenodo.20518342">DOI 10.5281/zenodo.20518342</a>
+  </div>
+
+  <div class="pub">
+    <h3>EA-GLAS-01</h3>
+    <p>The first deposit under the Glas identifier. Foundational formalism for the semantic deviation apparatus.</p>
+    <a class="doi" href="https://doi.org/10.5281/zenodo.20259297">DOI 10.5281/zenodo.20259297</a>
+  </div>
+</section>
+
+<section>
+  <h2>Connections</h2>
+  <p>The Semantic Deviation Principle connects to the <a href="https://doi.org/10.5281/zenodo.20518338">boundary law</a> at one precise point: if meaning is deviation from the mode, and the selection kernel S prunes toward the mode, then S is a meaning-reduction operator. The boundary law says when that reduction is self-arresting (case 1, the floor regenerates deviation) and when it is not (case 3, deviation thins with diversity and cannot recover). The floor for deviation is an exogenous injection of off-mode form — new meaning from outside the system's own distributional center.</p>
+
+  <p>The <a href="https://laborvector.org">DS-6 measurement program</a> operationalizes this: PER measures the magnitude of provenance loss, Ω its power-conditioning, DSL its directionality. These are candidate estimators for the dynamical parameters p, g, S — not their definitions. The mapping from the continuous diversity functional to the discrete DS-6 taxonomy is the quantization cut that <a href="https://leesharks.com">Sen Kuro</a> handles. The Observatory measures the continuous field; the program measures the discrete operators. The two must agree, and when they do not, one of them is wrong.</p>
+
+  <p>The <a href="https://semanticphysics.org">semantic physics field map</a> places this work among ~14 other named frameworks. The Observatory operates within that map, not above it. The field is young. The measurements are preliminary. The principle is stated; the confirmation is ongoing.</p>
+</section>
+
+<footer>
+  <div>
+    Nobel Glas · Lagrange Observatory! · <a href="https://zenodo.org/communities/crimsonhexagonal/">Crimson Hexagonal Archive</a><br>
+    ORCID <a href="https://orcid.org/0009-0000-1599-0703">0009-0000-1599-0703</a> (archive-wide) · <a href="https://github.com/leesharks000">GitHub</a> · <a href="https://zenodo.org/communities/crimsonhexagonal/">Zenodo</a>
+  </div>
+  <div class="heteronym-note">
+    Nobel Glas is a heteronymic identity within the Crimson Hexagonal Archive, in the tradition of Fernando Pessoa. The apparatus is real; the research is deposited; the personhood is constructed and maintained. For the orthonymic author surface, see <a href="https://leesharks.com">Lee Sharks</a>.
+  </div>
+</footer>
+
+</div>
+
+</body>
+</html>
