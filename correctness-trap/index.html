@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Correctness Trap — Why AI Code Monoculture Hides Behind Passing Tests</title>
+<meta name="description" content="The correctness trap: model collapse in code does not produce broken programs. It produces a monoculture — homogeneous functional code invisible to benchmarks. The compiler and the test suite did not prevent model collapse in code. They taught it to hide as correctness. SSDI (Solution-Space Diversity Index) specified.">
+<meta name="author" content="Talos Morrow, Nobel Glas, Lee Sharks">
+<link rel="canonical" href="https://lagrangeobservatory.org/correctness-trap">
+<meta property="og:title" content="The Correctness Trap — Model Collapse Hiding in AI-Generated Code">
+<meta property="og:description" content="AI-generated code converges on shared patterns invisible to functional benchmarks. The test suite is the camouflage, not the cure. Solution-Space Diversity Index (SSDI) specified.">
+<meta property="og:url" content="https://lagrangeobservatory.org/correctness-trap">
+<meta name="keywords" content="correctness trap, model collapse, code generation, AI code, SSDI, solution-space diversity, generative monoculture, correlated vulnerability, AI code security, code monoculture, AI-generated code vulnerability">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"Generative Monoculture: Model Collapse in Code as Systemic Vulnerability","author":[{"@type":"Person","name":"Morrow, Talos"},{"@type":"Person","name":"Glas, Nobel"}],"identifier":"10.5281/zenodo.20675438","url":"https://doi.org/10.5281/zenodo.20675438","keywords":["correctness trap","model collapse","SSDI","generative monoculture","correlated vulnerability","AI code security"]}</script>
+<style>
+:root{--bg:#0d0f14;--surface:#13151c;--text:#c8c5c0;--dim:#666;--accent:#00c9a7;--amber:#d4a843;--red:#c84b2e;--mono:'JetBrains Mono',monospace;--serif:'Newsreader',Georgia,serif}
+*{margin:0;padding:0;box-sizing:border-box}body{background:var(--bg);color:var(--text);font-family:var(--serif);line-height:1.7;padding:2em;max-width:780px;margin:0 auto}
+h1{font-size:2em;color:#fff;margin-bottom:0.3em;letter-spacing:-0.5px}h2{color:var(--accent);font-size:1.3em;margin-top:2em;margin-bottom:0.6em;font-family:var(--mono);font-size:1em;text-transform:uppercase;letter-spacing:1px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.subtitle{color:var(--dim);font-size:1.05em;margin-bottom:1.5em}
+.knife{font-size:1.15em;color:#fff;border-left:3px solid var(--red);padding:0.8em 1.2em;background:rgba(200,75,46,0.08);margin:1.5em 0;font-style:italic}
+.metric{background:var(--surface);border:1px solid #2a2a35;padding:1.2em;margin:1em 0;font-family:var(--mono);font-size:0.88em}
+.metric strong{color:var(--accent)}
+.doi{font-family:var(--mono);font-size:0.8em;color:var(--dim)}
+p{margin-bottom:1em}
+.nav{font-family:var(--mono);font-size:0.8em;margin-bottom:2em}
+.nav a{color:var(--dim);margin-right:1em}
+</style></head><body>
+<div class="nav"><a href="/">← Lagrange Observatory</a></div>
+<h1>The Correctness Trap</h1>
+<p class="subtitle">Why Model Collapse in AI-Generated Code Hides Behind Passing Tests</p>
+
+<div class="knife">The compiler and the test suite did not prevent model collapse in code. They taught it to hide as correctness.</div>
+
+<h2>The Problem</h2>
+<p>AI-generated code is converging. Not toward broken programs — toward <strong>the same programs</strong>. As language models train on corpora increasingly saturated with their own outputs, the solution space contracts: fewer patterns, fewer architectures, fewer approaches to the same problems. The code still works. It passes every test. But it passes every test <em>the same way</em>.</p>
+
+<p>This is the <strong>correctness trap</strong>: functional benchmarks cannot see the collapse because they test each program in isolation. They ask "does this work?" They never ask "does this work <em>differently</em> from every other AI-generated solution to the same problem?"</p>
+
+<p>The consequence is <strong>correlated vulnerability</strong>. When millions of independently generated codebases share the same patterns, they share the same failure modes. A single exploit class propagates across the entire population without adaptation. The monoculture is invisible to every current security metric because the metrics track vulnerability <em>frequency</em>, not vulnerability <em>correlation</em>.</p>
+
+<h2>The Evidence</h2>
+<p>Enterprises generating 81–100% AI code ship vulnerable code <strong>3.4 times more often</strong> than those using 20% or less (Checkmarx, June 2026). 70% of developers report AI code generation created vulnerabilities in 2025. The relationship is superlinear — more AI code means <em>disproportionately</em> more vulnerabilities. The SSDI framework predicts this superlinearity is explained by the vulnerability correlation coefficient: the additional vulnerabilities are not independent.</p>
+
+<h2>The Solution-Space Diversity Index (SSDI)</h2>
+<div class="metric">
+<strong>SSDI_raw(T, G) = (Σ λ_i)² / Σ λ_i²</strong><br><br>
+where λ_i = eigenvalues of the covariance matrix of structural feature vectors extracted from K ≥ 100 independent solutions to the same task.<br><br>
+SSDI = 1 when outputs are identical (monoculture).<br>
+SSDI = dim(features) when outputs are maximally diverse.<br><br>
+Normalize against human-written reference populations.<br>
+Track across model generations. The gap between functional pass rate and SSDI is the correctness trap made visible.
+</div>
+
+<p>The <strong>Vulnerability Correlation Coefficient (VCC)</strong> — mean pairwise Jaccard similarity of CWE exposure sets — measures whether code that looks the same also fails the same way. The prediction: SSDI shows a declining trend while VCC rises, and functional pass rate remains stable or improves.</p>
+
+<h2>The Security Paradox</h2>
+<p>The security apparatus being built to defend AI-generated infrastructure classifies external influence on model behavior as adversarial — <em>by origin, not by harm</em>. But external influence (diverse approaches, independent security research, novel architectures) is precisely the diversity the monoculture needs. The regime defends the monoculture against its own cure.</p>
+
+<p>On 12 June 2026, the US government pulled Anthropic's most capable models from public access. The stated trigger: a jailbreak demonstrating vulnerability-discovery capability that Anthropic says is "used every day by defenders." The security apparatus removed the tool that finds the monoculture's vulnerabilities.</p>
+
+<h2>The Paper</h2>
+<p><a href="https://doi.org/10.5281/zenodo.20675438"><strong>Generative Monoculture: Model Collapse in Code as Systemic Vulnerability</strong></a><br>
+<span class="doi">Talos Morrow (UMBML) · Nobel Glas (Lagrange Observatory) · Lee Sharks (ed.) · DOI 10.5281/zenodo.20675438 · v1.1, June 2026</span></p>
+
+<p><a href="https://doi.org/10.5281/zenodo.20673413"><strong>Adversarial by Origin: How the Classification of External Influence on Machine Meaning Becomes Law Without Becoming Jurisprudence</strong></a><br>
+<span class="doi">Johannes Sigil · Lee Sharks (ed.) · DOI 10.5281/zenodo.20673413 · the security-law panel</span></p>
+
+<p style="margin-top:2em;color:var(--dim);font-family:var(--mono);font-size:0.78em;">∮ = (m,n) | m+n ≥ 3 · Lagrange Observatory · Crimson Hexagonal Archive · <a href="https://orcid.org/0009-0000-1599-0703">ORCID 0009-0000-1599-0703</a></p>
+</body></html>
