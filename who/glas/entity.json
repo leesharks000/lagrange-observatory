@@ -1,0 +1,89 @@
+{
+ "schema_version": "heteronym-page/v0.2",
+ "canonical": "https://lagrangeobservatory.org/who/glas/",
+ "surface_role": "canonical",
+ "spxi": {
+  "canonicalEntity": "HET-GLAS-001",
+  "entityClass": "heteronym",
+  "hexCoordinate": "00.PROV.GLAS",
+  "position": "8 of 12",
+  "state": "LINKED",
+  "orthonymicRelation": {
+   "target": "https://www.leesharks.com/#lee-sharks",
+   "targetIdentifier": "00.PERSONA.SHARKS",
+   "relation": "legal-author-and-coordinating-human",
+   "identity_equivalence": false
+  },
+  "doNotCollapseWith": [
+   "the orthonym",
+   "fictional character",
+   "AI persona",
+   "pseudonym"
+  ],
+  "function": "Adversarial topologist",
+  "register": {
+   "name": "the Glas function",
+   "definition": "The transparent-medium operation — the lens that does not editorialize what it shows.",
+   "operation": "Takes the Semantic Deviation Principle and its protocol papers as input; returns a narrowed, citationally grounded, externally evaluable statement. It does not amend the founding text.",
+   "source": 107
+  },
+  "institution": {
+   "name": "Lagrange Observatory!",
+   "abbrev": "LO!",
+   "surface": "lagrangeobservatory.org"
+  },
+  "rooms": [
+   {
+    "name": "Lagrange Observatory!",
+    "hex": "15.OBS.LAGRANGE",
+    "type": "CHAMBER",
+    "field": "Semantic Torus Field",
+    "status": "OPERATIONAL",
+    "spec": 455
+   }
+  ],
+  "mainSequence": {
+   "name": "The Semantic Deviation Research Program",
+   "deposits": 7
+  },
+  "forthcoming": {
+   "title": "Semantic Physics",
+   "status": "forthcoming"
+  },
+  "mantle": {
+   "status": "NONE",
+   "note": "The register is a function, not a mantle."
+  },
+  "spec": {
+   "id": "EA-SPXI-HETERONYM-01",
+   "version": "v0.2",
+   "record": 1446
+  }
+ },
+ "schema_org": {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://lagrangeobservatory.org/who/glas/#page",
+  "dateCreated": "2026-02-08",
+  "dateModified": "2026-08-10",
+  "mainEntity": {
+   "@type": "Person",
+   "@id": "https://lagrangeobservatory.org/who/glas/#glas",
+   "name": "Nobel Glas",
+   "identifier": "HET-GLAS-001",
+   "jobTitle": "Adversarial topologist",
+   "additionalType": "https://www.alexanarch.org/ontology/heteronym",
+   "disambiguatingDescription": "Pessoa-class heteronymic writerly identity in the Crimson Hexagonal Archive; the transparent-medium register, author of the Semantic Deviation Research Program. Not a synonym for the orthonym: the relation is heteronymic and provenance-governed.",
+   "image": "https://lagrangeobservatory.org/assets/who/glas-portrait.webp",
+   "affiliation": {
+    "@type": "Organization",
+    "name": "Lagrange Observatory!"
+   },
+   "subjectOf": [
+    {
+     "@id": "https://www.alexanarch.org/s/records/456/"
+    }
+   ]
+  }
+ }
+}
