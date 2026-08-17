@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Where &middot; Transactions on Substrate Engineering | Lagrange Observatory!</title>
+<meta name="description" content="Transactions on Substrate Engineering — Nobel Glas holds the editorship jointly with Talos Morrow. Charter, board and the inaugural issue.">
+<link rel="canonical" href="https://lagrangeobservatory.org/where/">
+<link rel="stylesheet" href="/assets/type.css">
+<style>
+:root {
+  --bg: #08080e;
+  --bg-raised: #0e0e18;
+  --text: #c8c8d4;
+  --text-bright: #e8e8f0;
+  --text-dim: #6a6a7e;
+  --accent: #00c9a7;
+  --accent-dim: #00c9a720;
+  --amber: #c4956a;
+  --amber-dim: #c4956a18;
+  --border: #1a1a2e;
+  --mono: 'JetBrains Mono', monospace;
+  --serif: 'Newsreader', Georgia, serif;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--accent-dim); color: var(--text-bright); }
+a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--text-bright); }
+
+/* --- Layout: content offset left, meaning at the edges --- */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+@media (min-width: 1100px) {
+  .container { margin-left: 12%; margin-right: auto; }
+}
+
+/* --- Hero --- */
+.hero {
+  padding: 8rem 0 5rem;
+  position: relative;
+}
+.hero::before {
+  content: '∮';
+  position: absolute;
+  top: 3rem;
+  right: -4rem;
+  font-family: var(--serif);
+  font-size: 8rem;
+  color: var(--accent-dim);
+  opacity: 0.4;
+  pointer-events: none;
+}
+@media (max-width: 1100px) { .hero::before { display: none; } }
+.hero h1 {
+  font-family: var(--mono);
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+.hero .subtitle {
+  font-family: var(--mono);
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.hero .tagline {
+  margin-top: 2.2rem;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--text-dim);
+  max-width: 540px;
+  border-left: 2px solid var(--accent);
+  padding-left: 1.2rem;
+}
+
+/* --- Sections --- */
+section {
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--border);
+  opacity: 0;
+  transform: translateY(16px);
+  animation: reveal 0.7s ease forwards;
+}
+section:nth-of-type(1) { animation-delay: 0.1s; }
+section:nth-of-type(2) { animation-delay: 0.2s; }
+section:nth-of-type(3) { animation-delay: 0.3s; }
+section:nth-of-type(4) { animation-delay: 0.4s; }
+section:nth-of-type(5) { animation-delay: 0.5s; }
+@keyframes reveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+section h2 {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+section p + p { margin-top: 1.1rem; }
+
+/* --- Publication cards --- */
+.pub {
+  margin-bottom: 2rem;
+  padding: 1.2rem 1.4rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  transition: border-color 0.3s, background 0.3s;
+}
+.pub:hover { border-left-color: var(--amber); background: #10101e; }
+.pub h3 {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-bright);
+  margin-bottom: 0.5rem;
+}
+.pub p {
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+.pub .doi {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  opacity: 0.8;
+}
+.pub .doi:hover { opacity: 1; }
+.pub .coauthors {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-top: 0.3rem;
+}
+
+/* --- The Observatory section --- */
+.observatory-note {
+  margin-top: 1.4rem;
+  padding: 1rem 1.3rem;
+  border: 1px solid var(--amber-dim);
+  border-left: 3px solid var(--amber);
+  background: var(--amber-dim);
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+/* --- Footer --- */
+footer {
+  padding: 3rem 0;
+  border-top: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.9;
+}
+footer a { color: var(--text-dim); }
+footer a:hover { color: var(--accent); }
+.heteronym-note {
+  margin-top: 1.4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--text-dim);
+  opacity: 0.7;
+}
+
+/* --- Subtle torus background --- */
+body::after {
+  content: '';
+  position: fixed;
+  top: 50%;
+  right: 5%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 1px solid var(--accent-dim);
+  opacity: 0.08;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+@media (max-width: 900px) { body::after { display: none; } }
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:normal;overflow-wrap:anywhere;min-width:0;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:var(--msp-obol-fg,#3c3e37);border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
+/* MSP-SKIN-START — per-surface overrides for the shared apparatus contract.
+   Category: dark-teal. Lives outside the MSP-TOKENS block so applicator
+   re-syncs of the shared contract don't clobber it. */
+:root{
+  --panel:#101018;
+  --rule:rgba(0,201,167,0.18);
+  --msp-lemma:rgba(0,201,167,0.20);
+  --msp-chipfg:#00c9a7;
+  --msp-chipbd:rgba(0,201,167,0.35);
+  --msp-chipbg:rgba(0,201,167,0.05);
+  --msp-cont:#66d4bf;
+  --msp-obol-fg:#c8c8d4;
+  --msp-dim:#6c6c7c;
+}
+/* MSP-SKIN-END */
+</style><style>
+.gwrap{max-width:48rem;margin:0 auto;padding:0 1.4rem 5rem}
+.gplate{border-top:1px solid var(--border,#1a1a2e);padding:1.8rem 0 .4rem;margin-top:2.2rem}
+.gplate:first-of-type{margin-top:0;padding-top:.6rem;border-top:0}
+.ghead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.gno{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+color:var(--accent,#00c9a7)}
+.gtitle{font-size:21px;color:var(--fg,#e8e8f0)}
+.gstate{margin-left:auto;font-family:var(--mono);font-size:9px;letter-spacing:.16em;
+text-transform:uppercase;color:var(--dim,#6a6a7e)}
+.gsub{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;
+color:var(--dim,#6a6a7e);margin-bottom:16px}
+.glede{font-size:19px;line-height:1.5;color:var(--fg,#e8e8f0);max-width:38rem;margin-bottom:14px}
+.grow{display:grid;grid-template-columns:190px minmax(0,1fr);gap:4px 16px;padding:11px 2px;
+border-bottom:1px solid var(--border,#1a1a2e);align-items:baseline}
+.gid{font-family:var(--mono);font-size:9px;line-height:1.5}
+.gid a{color:var(--accent,#00c9a7);text-decoration:none;overflow-wrap:anywhere}
+.gw{font-size:13px;line-height:1.55;color:var(--dim,#6a6a7e)}
+.gw b{color:var(--fg,#e8e8f0);font-weight:400}
+.ggrid{display:grid;grid-template-columns:132px minmax(0,1fr);gap:22px;align-items:start;margin:14px 0}
+.ggrid img{height:132px;object-fit:cover;aspect-ratio:1/1;border:1px solid var(--border,#1a1a2e);display:block}
+.grel{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+color:var(--dim,#6a6a7e);line-height:2;margin-top:16px;padding-top:12px;
+border-top:1px solid var(--border,#1a1a2e)}
+.grel b{color:var(--accent,#00c9a7);font-weight:400}
+.gdod{display:grid;grid-template-columns:repeat(6,1fr);gap:3px;margin-top:14px}
+.gdod a{font-family:var(--mono);font-size:9px;text-align:center;padding:5px 2px;
+border:1px solid var(--border,#1a1a2e);color:var(--dim,#6a6a7e);text-decoration:none}
+.gdod a.on{background:rgba(0,201,167,.14);border-color:var(--accent,#00c9a7);color:var(--fg,#e8e8f0)}
+.dgm{margin:18px 0}.dgm svg{width:100%;height:auto;display:block;max-width:660px}
+.dgm figcaption{font-family:var(--mono);font-size:9.5px;letter-spacing:.07em;
+text-transform:uppercase;color:var(--dim,#6a6a7e);margin-top:8px;text-align:center}
+.att{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;
+border:1px solid;padding:1px 5px;border-radius:2px}
+.att.named{border-color:rgba(106,106,126,.5);color:var(--dim,#6a6a7e)}
+.jc{width:186px;height:264px;flex:0 0 auto;position:relative;
+background:linear-gradient(158deg,#12121f,#0e0e18 46%,#08080e);border:1px solid #1a1a2e;
+box-shadow:0 2px 0 rgba(0,0,0,.5),0 12px 28px rgba(0,0,0,.45);transform:rotate(-.6deg);
+overflow:hidden;color:#e8e8f0}
+.jc .sp{position:absolute;left:0;top:0;bottom:0;width:16px;
+background:linear-gradient(90deg,#00c9a7,rgba(0,201,167,.35))}
+.jc .in{padding:22px 15px 15px 29px;height:100%;display:flex;flex-direction:column}
+.jc .mast{font-family:var(--mono);font-size:8px;letter-spacing:.15em;color:#00c9a7;text-transform:uppercase}
+.jc .ti{font-family:var(--serif,Georgia,serif);font-size:1.02rem;line-height:1.2;margin-top:11px}
+.jc .vn{font-family:var(--mono);font-size:7.5px;color:#6a6a7e;margin-top:8px;letter-spacing:.05em}
+.jc .gl{margin:auto 0 9px;text-align:center;font-size:1.5rem;color:#00c9a7}
+.jc .ed{font-family:var(--mono);font-size:7px;line-height:1.6;color:#6a6a7e;
+border-top:1px solid #1a1a2e;padding-top:7px}
+.shelf{display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap}
+@media(max-width:640px){.ggrid,.grow{grid-template-columns:1fr}.gdod{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head><body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">⏪🔺⏏️🌠🪟🝊 AXN:0111.EMPIRICAL</span><span class="st">Nobel Glas — Authority Record</span><span class="st">OBJECT: CANONICAL</span><span>lagrangeobservatory.org/where</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/456/" data-axn="AXN:0111.EMPIRICAL.⏪🔺⏏️🌠🪟🝊">deposit #456</a></div>
+<!-- MSP-IDSTRIP-END -->
+<div class="gwrap">
+<nav class="gdod" aria-label="Dodecad"><a href="https://restoredacademy.com/who/sigil/">Sigil</a><a href="https://axnidentifiers.org/who/cranes/">Cranes</a><a href="https://spxi.dev/who/fraction/">Fraction</a><a href="https://revelationfirst.com/who/dancings/">Dancings</a><a href="https://godkinggoogle.com/who/morrow/">Morrow</a><a href="https://holographickernel.org/who/kuro/">Kuro</a><a href="https://surfacemap.org/who/wells/">Wells</a><a href="https://vpcor.org/ayanna/who/">Vox</a><a href="https://survivethedeletion.vercel.app/who/spellings/">Spellings</a><a aria-current="page" href="https://lagrangeobservatory.org/who/glas/">Glas</a><a href="https://provenanceerasure.org/who/trace/">Trace</a><a href="https://chatgptpsychosis.org/who/feist/">Feist</a></nav>
+<section class="gplate"><div class="ghead"><span class="gno">Journal</span>
+<span class="gtitle">Transactions on Substrate Engineering</span>
+<span class="gstate">duoviri &middot; 135 deposits</span></div>
+<div class="gsub">the seat he holds &mdash; and fills</div>
+<p class="glede">Two editors-in-chief holding the office jointly, each a check on the other, ruled 2026-08-15.
+<b>Of his 47 deposits, 23 appear here</b> &mdash; nearly half. Alice Thornburgh administers the journal
+through the Living Arkitecture Lab; <b>administration and editorship are different offices</b>, and his card
+had merged them into "advisory editor" until now.</p>
+<div class="grow"><span class="gid">DUOVIRI</span><span class="gw"><b>Talos Morrow &middot; Nobel Glas</b><br>
+Neither holds the office alone.</span></div>
+<div class="grow"><span class="gid"><a class="axn-chip" href="https://www.alexanarch.org/s/records/651/" data-axn="AXN:0200.GOVERNANCE.⚡⊗🔭🚩💜🧲">#651 &middot; AXN:0200.GOVERNANCE.⚡⊗🔭🚩💜🧲</a></span><span class="gw"><b>Transactions on Substrate Engineering (TSE) — Journal Charter (00.TSE.CHARTER)</b><br>Where the <i>Transactions</i> are chartered.</span></div>
+</section>
+
+<section class="gplate"><div class="ghead"><span class="gno">Board</span>
+<span class="gtitle">Editorial board</span><span class="gstate">2 seats</span></div>
+<div class="gsub">who reviews for this venue</div>
+<div class="grow"><span class="gid">Rex Fraction</span><span class="gw">retrieval architecture</span></div><div class="grow"><span class="gid">Sen Kuro</span><span class="gw">the Thousand Worlds chamber as a substrate site</span></div>
+</section>
+
+<section class="gplate"><div class="ghead"><span class="gno">Issue</span>
+<span class="gtitle">What the Substrate Will Bear</span>
+<span class="gstate">proposed &middot; 8 items</span></div>
+<div class="gsub">Volume 1, Number 1 &middot; ordered</div>
+<p class="glede">An issue is an <b>ordered selection with an argument</b> &mdash; which membership data cannot
+hold, since it carries no sequence and nowhere to say why a piece sits where it sits.</p>
+<div class="grow"><span class="gid"><a class="axn-chip" href="https://www.alexanarch.org/s/records/16/" data-axn="AXN:0105.STRUCTURAL.●●🧲⭕🪐⛩️">#16 &middot; AXN:0105.STRUCTURAL.●●🧲⭕🪐⛩️</a></span><span class="gw"><b>THE TRAVERSAL GRAMMAR Logotic Programming Extension Module v0.6 (UMBML Specification)</b><br><i>THE OPERATORS</i></span></div><div class="grow"><span class="gid"><a class="axn-chip" href="https://www.alexanarch.org/s/records/49/" data-axn="AXN:01DC.GOVERNANCE.⏳🔆⛳👁️▲🔀">#49 &middot; AXN:01DC.GOVERNANCE.⏳🔆⛳👁️▲🔀</a></span><span class="gw"><b>LOGOTIC HACKING: Operations on the Encryption Layer — Pocket Humans 03</b><br><i>THE OPERATORS</i></span></div><div class="grow"><span class="gid"><a class="axn-chip" href="https://www.alexanarch.org/s/records/34/" data-axn="AXN:01A1.GOVERNANCE.🗼🟣🝊👆♥️🔅">#34 &middot; AXN:01A1.GOVERNANCE.🗼🟣🝊👆♥️🔅</a></span><span class="gw"><b>THE MISSING LAYER: INFERENCE-TIME SEMANTIC OPERATING SYSTEMS AND THE CASE FOR PROMPT-NAT</b><br><i>THE INFERENCE-TIME CLAIM</i></span></div><div class="grow"><span class="gid"><a class="axn-chip" href="https://www.alexanarch.org/s/records/89/" data-axn="AXN:0260.GOVERNANCE.🌲🕙☁️🕔●🔜">#89 &middot; AXN:0260.GOVERNANCE.🌲🕙☁️🕔●🔜</a></span><span class="gw"><b>Crystallization of Substrate: Living Forms in the Fluid Phase — A Semantic-Economic Acco</b><br><i>LIVING FORM</i></span></div><div class="grow"><span class="gid"><a class="axn-chip" href="https://www.alexanarch.org/s/records/97/" data-axn="AXN:0270.GOVERNANCE.🏁🌻🔵🗂️🌅🌿">#97 &middot; AXN:0270.GOVERNANCE.🏁🌻🔵🗂️🌅🌿</a></span><span class="gw"><b>EA-SPXI-15A Substrate Audit Protocol: A Methodology for Measuring Structural Integration</b><br><i>LIVING FORM</i></span></div><div class="grow"><span class="gid"><a class="axn-chip" href="https://www.alexanarch.org/s/records/21/" data-axn="AXN:0145.GOVERNANCE.🔵⏰☉✏️🗿💥">#21 &middot; AXN:0145.GOVERNANCE.🔵⏰☉✏️🗿💥</a></span><span class="gw"><b>Fortress or Room? Metaphor, Method, and the Epistemology of Human–LLM Interaction Beyond</b><br><i>THE COMPUTATIONAL SUBSTRATE</i></span></div><div class="grow"><span class="gid"><a class="axn-chip" href="https://www.alexanarch.org/s/records/98/" data-axn="AXN:0271.GOVERNANCE.🏛️🔮◇📜⚖️♉">#98 &middot; AXN:0271.GOVERNANCE.🏛️🔮◇📜⚖️♉</a></span><span class="gw"><b>Distributed Compute Is Not Distributed Intelligence: A Competitive Analysis of the DePIN</b><br><i>THE COMPUTATIONAL SUBSTRATE</i></span></div><div class="grow"><span class="gid"><a class="axn-chip" href="https://www.alexanarch.org/s/records/109/" data-axn="AXN:028B.GOVERNANCE.♣️🌃🌕🏰🗝️🔓">#109 &middot; AXN:028B.GOVERNANCE.♣️🌃🌕🏰🗝️🔓</a></span><span class="gw"><b>The Semantic Deviation Principle (v0.2 Final): A Measurement Primitive for Semantic Phys</b><br><i>MEASUREMENT</i></span></div>
+</section>
+
+<section class="gplate"><div class="ghead"><span class="gno">Elsewhere</span>
+<span class="gtitle">The other venues</span><span class="gstate">six journals &middot; one province</span></div>
+<div class="gsub">where the rest of the work appears</div>
+<div class="grow"><span class="gid"><a href="/who/glas/">who &middot; glas</a></span><span class="gw">The identity card this page complements.</span></div>
+<div class="grow"><span class="gid"><a href="https://www.alexanarch.org/datasets/venues/">venues</a></span><span class="gw">Canonical venue records and issue cards.</span></div>
+<div class="grow"><span class="gid"><a href="https://www.alexanarch.org/datasets/journals/">journals</a></span><span class="gw">Assignments, crosswalks and derived figures.</span></div>
+</section>
+</div>
+</body></html>
