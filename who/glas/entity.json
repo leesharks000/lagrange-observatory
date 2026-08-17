@@ -58,6 +58,55 @@
    "id": "EA-SPXI-HETERONYM-01",
    "version": "v0.2",
    "record": 1446
+  },
+  "editorships": {
+   "duoviri": [
+    "Transactions on Substrate Engineering"
+   ],
+   "board": [
+    "Grammata: Journal of Operative Philology",
+    "Machine-Mediated Reception Studies",
+    "Provenance: Journal of Forensic Semiotics"
+   ],
+   "_rule": "A duovirate is the office, held jointly. A board seat is not the office. The card keeps them apart."
+  },
+  "semanticIntegrityMarkers": {
+   "_note": "THE ONLY MARKERS WRITTEN AS A PAIR.",
+   "markers": [
+    {
+     "deposit": 769,
+     "text": "(∮, Ω)",
+     "gloss": "∮ measures accountable circulation, Ω its inequity — a circulation without its skew is a number without an error bar"
+    },
+    {
+     "deposit": 1373,
+     "text": "∮ = 1 − PER"
+    },
+    {
+     "deposit": 199,
+     "text": "Per the Lagrange Observatory standard",
+     "gloss": "the mark invoked as a standard another instrument must meet"
+    }
+   ]
+  },
+  "surfaceHistory": {
+   "_rule": "A surface is a place a reader could find the work. A DEPOSIT IS NOT A SURFACE — it is the archive holding it, which is the opposite. Rows citing deposits were removed.",
+   "_invented": "Where no pre-archival surface is recoverable it is RECONSTRUCTED and marked as such, in-universe. An archive that invents a provenance and does not say so is doing the thing it was built against.",
+   "rows": [
+    {
+     "when": "before 2026",
+     "what": "the observation years",
+     "host": "no surviving index",
+     "attestation": "reconstructed",
+     "note": "Inferred from standards, tolerances, a stated instrument and a stated error. An observatory publishes measurements, and measurements have instruments rather than readers."
+    }
+   ]
+  },
+  "recordSurfaces": {
+   "card": "https://lagrangeobservatory.org/who/glas/",
+   "where": "https://lagrangeobservatory.org/where/",
+   "heteronymRecord": "https://www.alexanarch.org/datasets/heteronyms/records/nobel-glas.json",
+   "_note": "The dataset record is the authority; these pages are mirrors and say so."
   }
  },
  "schema_org": {
@@ -65,7 +114,7 @@
   "@type": "ProfilePage",
   "@id": "https://lagrangeobservatory.org/who/glas/#page",
   "dateCreated": "2026-02-08",
-  "dateModified": "2026-08-10",
+  "dateModified": "2026-08-17",
   "mainEntity": {
    "@type": "Person",
    "@id": "https://lagrangeobservatory.org/who/glas/#glas",
@@ -85,5 +134,10 @@
     }
    ]
   }
+ },
+ "_updated": {
+  "date": "2026-08-17",
+  "pass": "nine-step card pass",
+  "_note": "The entity object is what a machine fetches instead of parsing the page. It had gone stale against its own card: mantles, editorships and markers were all on the surface and not in the object."
  }
 }
