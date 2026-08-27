@@ -1,9 +1,10 @@
 # Lagrange Observatory! — lagrangeobservatory.org
 
 > R:r.15 of the Crimson Hexagon. Framework 15 and the measurement programme:
-> semantic deviation, winding-number protocol, deviation-optimized models, and
-> accelerator classifier architectures. A control plane for measuring selection
-> before irreversible data loss.
+> semantic deviation, winding-number protocol, deviation-optimized models,
+> accelerator classifier architectures, and the keyed-ensemble analysis of
+> watermarked training ecologies (#1555, #1556). A control plane for measuring
+> selection before irreversible data loss.
 
 **Voice:** Nobel Glas. Part of the Crimson Hexagonal Archive.
 
