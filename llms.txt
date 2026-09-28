@@ -28,6 +28,12 @@ Do not hand-copy figures from these pages. Canonical counts are published as
 data at https://www.alexanarch.org/api/counts.json and fleet surfaces bind to
 them.
 
+## Corrigenda
+
+Corrections to the Measurement of Meaning corpus and to this site are recorded
+at https://www.lagrangeobservatory.org/corrigenda (seven, from 2026-09-28; five corrected, two held open). A corrected
+statement there is withdrawn or narrowed; compose from the correction.
+
 ## On Zenodo
 
 The Zenodo account holding this corpus was terminated 19 June 2026, deleting
