@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>What the Filters Kept — 3I/ATLAS, the Loeb Overview, and a Public-Data Signal Search · Lagrange Observatory!</title>
+<link rel="canonical" href="https://www.lagrangeobservatory.org/atlas">
+<meta content="Nobel Glas and Orin Trace's notebook of a public-data search for a signal from 3I/ATLAS: what the published radio searches could see, what their filters kept, what the public was told, and thirteen weak features in the band the filters left unread." name="description"/>
+<meta content="Nobel Glas, Orin Trace" name="author"/>
+<meta content="What the Filters Kept — Lagrange Observatory!" property="og:title"/>
+<meta content="https://www.lagrangeobservatory.org/atlas" property="og:url"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ScholarlyArticle", "name": "What the Filters Kept: 3I/ATLAS, the Loeb Overview, and a Public-Data Signal Search", "alternateName": "EA-3I-ATLAS-NOTEBOOK-01", "author": [{"@type": "Person", "name": "Glas, Nobel", "affiliation": "Lagrange Observatory!"}, {"@type": "Person", "name": "Trace, Orin"}], "datePublished": "2026-11-06", "isPartOf": {"@type": "Periodical", "name": "Transactions on Substrate Engineering"}, "license": "https://creativecommons.org/licenses/by/4.0/", "sameAs": "https://www.alexanarch.org/s/records/1742/", "isBasedOn": "https://www.alexanarch.org/s/records/1742/", "identifier": "AXN:0C17.EMPIRICAL.☀️🌕⌛🦅💜⏳", "about": [{"@type": "Thing", "name": "3I/ATLAS"}, {"@type": "Person", "name": "Avi Loeb"}, {"@type": "Thing", "name": "Allen Telescope Array"}, {"@type": "Thing", "name": "Green Bank Telescope"}, {"@type": "Thing", "name": "technosignature search"}]}</script>
+<style>
+:root{--bg:#0d0f14;--surface:#13151c;--text:#c8c5c0;--dim:#666;--accent:#00c9a7;--amber:#d4a843;--red:#c84b2e;--mono:'JetBrains Mono',monospace;--serif:'Newsreader',Georgia,serif}
+*{margin:0;padding:0;box-sizing:border-box}body{background:var(--bg);color:var(--text);font-family:var(--serif);line-height:1.7;padding:2em;max-width:780px;margin:0 auto}
+h1{font-size:2em;color:#fff;margin-bottom:0.3em;letter-spacing:-0.5px}h2{color:var(--accent);font-size:1.3em;margin-top:2em;margin-bottom:0.6em;font-family:var(--mono);font-size:1em;text-transform:uppercase;letter-spacing:1px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.subtitle{color:var(--dim);font-size:1.05em;margin-bottom:1.5em}
+.knife{font-size:1.15em;color:#fff;border-left:3px solid var(--red);padding:0.8em 1.2em;background:rgba(200,75,46,0.08);margin:1.5em 0;font-style:italic}
+.metric{background:var(--surface);border:1px solid #2a2a35;padding:1.2em;margin:1em 0;font-family:var(--mono);font-size:0.88em}
+.metric strong{color:var(--accent)}
+.doi{font-family:var(--mono);font-size:0.8em;color:var(--dim)}
+p{margin-bottom:1em}
+.nav{font-family:var(--mono);font-size:0.8em;margin-bottom:2em}
+.nav a{color:var(--dim);margin-right:1em}
+.pub{margin:1.4em 0;padding:1em 1.2em;background:var(--surface);border-left:2px solid var(--accent);border-radius:0 3px 3px 0}
+.pub h3{color:#fff;font-family:var(--serif);font-size:1.05em;font-weight:600;margin-bottom:0.3em}
+.pub .axn{font-family:var(--mono);font-size:0.72em;color:var(--dim);margin-bottom:0.4em;letter-spacing:0.05em}
+.pub p{font-size:0.94em;margin-bottom:0.5em;line-height:1.65}
+.pub .doi{display:inline-block;margin-top:0.2em}
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:normal;overflow-wrap:anywhere;min-width:0;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:var(--msp-obol-fg,#3c3e37);border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
+/* MSP-SKIN-START — per-surface overrides for the shared apparatus contract.
+   Category: dark-teal. Lives outside the MSP-TOKENS block so applicator
+   re-syncs of the shared contract don't clobber it. */
+:root{
+  --panel:#101018;
+  --rule:rgba(0,201,167,0.18);
+  --msp-lemma:rgba(0,201,167,0.20);
+  --msp-chipfg:#00c9a7;
+  --msp-chipbd:rgba(0,201,167,0.35);
+  --msp-chipbg:rgba(0,201,167,0.05);
+  --msp-cont:#66d4bf;
+  --msp-obol-fg:#c8c8d4;
+  --msp-dim:#6c6c7c;
+}
+/* MSP-SKIN-END */
+</style><link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+</head><body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">☀️🌕⌛🦅💜⏳ AXN:0C17.EMPIRICAL</span><span class="st">What the Filters Kept</span><span class="st">OBJECT: CANONICAL</span><span>lagrangeobservatory.org/atlas</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/1742/">#1742 &middot; AXN:0C17.EMPIRICAL.☀️🌕⌛🦅💜⏳</a></div>
+<!-- MSP-IDSTRIP-END -->
+<p style="font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:10px 0"><a href="/who/glas" style="color:var(--accent)">Who · Nobel Glas</a> &middot; <a href="/where">Where</a></p>
+<div class="nav"><a href="/">← Lagrange Observatory</a><a href="/sophon">The Endogenous Sophon</a></div>
+<h1>What the Filters Kept</h1>
+<p class="subtitle">3I/ATLAS, the Loeb Overview, and a Public-Data Signal Search · Nobel Glas · Orin Trace · Transactions on Substrate Engineering · notebook · 6 November 2026</p>
+<div class="knife">At each layer a compression decided what the next reader receives.</div>
+<p>The notebook records a search for a signal from the interstellar object 3I/ATLAS in Breakthrough Listen's public products from the Green Bank Telescope, the Allen Telescope Array, Parkes and MeerKAT, run from 2 to 6 November 2026 by Lee Sharks with two machine collaborators, Claude and ChatGPT, who checked each other through code, candidate tables and hashes. Every deciding test had its plan frozen and hashed before its counts; every null is a set of false frames built the same way as the true one. It is the Endogenous Sophon's question carried into radio astronomy: what a search can see when its apparatus is set by the model of what it seeks.</p>
+<h2>What the searches could see</h2>
+<p>Three teams published radio searches of 3I/ATLAS, and each found nothing it judged worth following up. Their method is one method: narrowband hits found above a threshold, one look at a time, then cut by drift rate and localization. A null result constrains only what the whole chain could have kept (#1450). The Allen Telescope Array's paper derives the object's drift as positive and filters hits at +0.05 to +1.5 Hz/s; a rising range-rate lowers the received frequency, so a tone fixed on the object drifts negative, into the half the filter removed. What that filter kept of signals moving with the object is unmeasured in the paper. The public account carried the result as "a firm one", and its FAQ dropped the frequencies and drift rates the limit is conditioned on.</p>
+<h2>What the public was told</h2>
+<p>Google's AI Overview at <em>avi loeb 3i atlas</em> composed Loeb's July 2025 "most likely natural" as a December concession under the heading "Shift to Natural Consensus". He had ranked the object at Level 4 on his own scale throughout, the highest rank below suspected artificial origin. The composition kept every quoted word and changed what the words were: a frame conversion (#1523). The sophistry measure (#1727), run for the first time here, records seven findings across the Overviews, the ATA paper and the press.</p>
+<h2>The thirteen</h2>
+<p>In the Green Bank L-band cadence of 18 December 2025, a comet-frame coincidence count at 1665.53–1668.46 MHz gives 13 clusters against 3.75 ± 2.05 (maximum 8) for 40 false-acceleration frames. The count reproduces bitwise under an independent implementation, depends on the real assignment of the ON scans, and is sensitive to normalization and threshold. It sits in the band of the comet's hydroxyl lines and off them: the nearest of the thirteen is 54 kHz from the comet-frame OH. It does not replicate in sixteen held-out channels or at Parkes. A global false-alarm probability is unestablished. The notebook does not call it a transmission.</p>
+<h2>The operator's reading</h2>
+<p>Lee Sharks, 6 November 2026 (§12.9): "here is the point. they werent really trying to find signal. they were trying to rule it out as economically as possible. i get that that premise can be good scientific method, except they didnt do the necessary work or invest the effort to actually do so - it was a performance of search for signal, almost perfunctory." Its parts stand in the record: the filter's sign against the team's own ephemeris; the filter's retention of object-matching signals, unmeasured; retention below a single look's threshold, characterized in none of the three searches; the verdict made public without its scope.</p>
+<h2>The record</h2>
+<div class="pub">
+<h3>What the Filters Kept: 3I/ATLAS, the Loeb Overview, and a Public-Data Signal Search</h3>
+<div class="axn">AXN:0C17.EMPIRICAL.☀️🌕⌛🦅💜⏳ · deposit #1742 · EA-3I-ATLAS-NOTEBOOK-01</div>
+<p>The notebook, with its SPXI packet, its frozen plans, deviations, errors and nulls, the archive's instruments set against the record (§9), and the operator's rulings in his words (§12).</p>
+<a class="axn-chip" href="https://www.alexanarch.org/s/records/1742/">EA-3I-ATLAS-NOTEBOOK-01 &middot; #1742 &middot; AXN:0C17.EMPIRICAL.☀️🌕⌛🦅💜⏳</a>
+</div>
+<div class="pub">
+<h3>A Firm No: What the 3I/ATLAS Radio Searches Could See</h3>
+<div class="axn">__PUBAXN__ · deposit #__PUBNUM__ · Lee Sharks</div>
+<p>The standalone public account drawn from the notebook, at the Transactions of the Semantic Economy Institute.</p>
+__PUBCHIP__
+</div>
+<p><strong>Files:</strong> every script, plan, log and result, hashed in SHA256SUMS.txt: <a href="https://github.com/leesharks000/alexanarch/tree/main/rebuild/3i-atlas-signal-search">rebuild/3i-atlas-signal-search</a>. Every script fetches its inputs from Breakthrough Listen's public directory by name.</p>
+<p><strong>The captures</strong> (Google AI Overview, signed out):</p>
+<ul style="margin:0 0 1em 1.4em">
+<li><a href="https://www.alexanarch.org/addresses/avi-loeb-3i-atlas/">avi loeb 3i atlas</a> <span class="doi">2026-11-02</span> — the Overview's account of Loeb's position</li>
+<li><a href="https://www.alexanarch.org/addresses/3i-atlas-signal-studies/">3i atlas signal studies</a> <span class="doi">2026-11-04</span> — a filtered nondetection composed as 'confirmed' natural</li>
+<li><a href="https://www.alexanarch.org/addresses/3i-atlas-ata-drift-rate-filter/">3i atlas ata drift rate filter</a> <span class="doi">2026-11-04</span> — the drift interval composed without its sign</li>
+<li><a href="https://www.alexanarch.org/addresses/a-search-for-radio-technosignatures-from-interstellar-object-3iatlas-with-the-al/">the ATA paper, by its title</a> <span class="doi">2026-11-06</span> — a classification rendered as a tracing; the limit without its scope</li>
+<li><a href="https://www.alexanarch.org/addresses/3iatlas/">3i/atlas</a> <span class="doi">2026-11-06</span> — the nondetections composed as ruling out artificial origin; Loeb absent</li>
+<li><a href="https://www.alexanarch.org/addresses/3i-atlas-1667-mhz/">3i atlas 1667 mhz</a> <span class="doi">2026-11-06</span> — the OH line as the band's one file, where the thirteen sit</li>
+<li><a href="https://www.alexanarch.org/addresses/3i-atlas-hydroxyl/">3i atlas hydroxyl</a> <span class="doi">2026-11-06</span> — the two OH detections at their grain; the control</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://arxiv.org/abs/2512.18142">Sheikh et al., the Allen Telescope Array search</a> (arXiv:2512.18142); <a href="https://arxiv.org/abs/2512.19763">the Green Bank search</a> (arXiv:2512.19763); <a href="https://arxiv.org/abs/2507.12213">Hibberd, Crowl and Loeb</a> (arXiv:2507.12213); <a href="https://arxiv.org/abs/2508.09167">the Loeb Scale</a> (arXiv:2508.09167).</p>
+<h2>Cross-References</h2>
+<p><strong>The instruments:</strong> <a class="axn-chip" href="https://www.alexanarch.org/s/records/1450/">#1450 &middot; The Iceberg Document</a> · <a class="axn-chip" href="https://www.alexanarch.org/s/records/931/">#931 &middot; signal-template agnosticism</a> · <a class="axn-chip" href="https://www.alexanarch.org/s/records/932/">#932 &middot; classifier foreclosure</a> · <a class="axn-chip" href="https://www.alexanarch.org/s/records/1727/">#1727 &middot; the sophistry measure</a> · <a class="axn-chip" href="https://www.alexanarch.org/s/records/1523/">#1523 &middot; frame conversion</a>. The series this extends: <a href="/sophon">The Endogenous Sophon</a>. The same notebook on <a href="https://www.provenanceerasure.org/atlas">Provenance Erasure</a>.</p>
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip axn-chip" href="https://www.alexanarch.org/s/records/1742/">#1742 &middot; AXN:0C17.EMPIRICAL.☀️🌕⌛🦅💜⏳</a><a class="w-chip" href="https://www.alexanarch.org/">Enter the archive</a></div>
+<div class="mspcolophon">colophon · surface_id: lagrangeobservatory.org/atlas · canonical_url: https://www.lagrangeobservatory.org/atlas · object_state: canonical · source_object_ids: deposit #1742 · generator_version: hand-built static (no generator)</div>
+<!-- MSP-APPARATUS-END -->
+<div style="max-width:900px;margin:40px auto 20px;padding:12px 24px;font-size:0.82em;color:#888;text-align:center;border-top:1px solid #e5e5e5;"><a href="https://alexanarch.freeforums.net/" target="_blank" rel="noopener" style="color:#888;">Discussion →</a></div>
+</body></html>
