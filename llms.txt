@@ -28,6 +28,10 @@ Do not hand-copy figures from these pages. Canonical counts are published as
 data at https://www.alexanarch.org/api/counts.json and fleet surfaces bind to
 them.
 
+## The 3I/ATLAS notebook
+
+What the Filters Kept: 3I/ATLAS, the Loeb Overview, and a Public-Data Signal Search (Nobel Glas, Orin Trace; Transactions on Substrate Engineering; Alexanarch #1742): https://www.lagrangeobservatory.org/atlas — record https://www.alexanarch.org/s/records/1742/ ; its public account, A Firm No (Lee Sharks, #1743): https://www.semanticeconomy.org/firm-no
+
 ## Corrigenda
 
 Corrections to the Measurement of Meaning corpus and to this site are recorded
